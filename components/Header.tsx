@@ -4,6 +4,7 @@ import React from "react";
 
 //components
 import Nav from "./Nav";
+import MobileNav from "./MobileNav";
 
 const Header: React.FC = () => {
   return (
@@ -25,7 +26,9 @@ const Header: React.FC = () => {
         </div>
 
         {/* mobile nav */}
-        <div className="xl:hidden">mobile nav</div>
+        <div className="xl:hidden">
+          <MobileNav/>
+        </div>
 
       </div>
     </header>
