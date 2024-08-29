@@ -32,6 +32,43 @@ interface AboutData {
   info: InfoItem[];
 }
 
+interface ExperienceItem {
+  company: string;
+  position: string;
+  duration: string;
+}
+
+interface ExperienceData {
+  icon: string;
+  title: string;
+  description: string;
+  items: ExperienceItem[];
+}
+
+interface EducationItem {
+  institution: string;
+  degree: string;
+  duration: string;
+}
+
+interface EducationData {
+  icon: string;
+  title: string;
+  description: string;
+  items: EducationItem[];
+}
+
+interface SkillItem {
+  icon: React.ReactNode;
+  name: string;
+}
+
+interface SkillsData {
+  title: string;
+  description: string;
+  skillList: SkillItem[];
+}
+
 //about data
 const about: AboutData = {
   title: "About me",
@@ -66,7 +103,7 @@ const about: AboutData = {
 };
 
 //experience data
-const experience = {
+const experience: ExperienceData = {
   icon: "/assets/resume/icons/badge.svg",
   title: "My experience",
   description:
@@ -81,7 +118,7 @@ const experience = {
 };
 
 //education data
-const education = {
+const education: EducationData = {
   icon: "/assets/resume/icons/cap.svg",
   title: "My education",
   description:
@@ -106,7 +143,7 @@ const education = {
 };
 
 //skills data
-const skills = {
+const skills: SkillsData = {
   title: "My skills",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aut aspernatur veritatis accusantium.",
@@ -300,7 +337,9 @@ const Resume: React.FC = () => {
                         className="flex items-center justify-center xl:justify-start gap-4"
                       >
                         <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl flex-shrink-0">{item.fieldValue}</span>
+                        <span className="text-xl flex-shrink-0">
+                          {item.fieldValue}
+                        </span>
                       </li>
                     );
                   })}
