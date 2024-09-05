@@ -23,14 +23,14 @@ const Home: React.FC = () => {
               proficient in various programming languages and technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
+              <a
+                href="/assets/resume/Ryan_Goh_CV.pdf"
+                download
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-semibold ring-offset-white transition-colors border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary h-[56px] px-8 uppercase tracking-[2px]"
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
-              </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <Stats/>
+      <Stats />
     </section>
   );
 };
