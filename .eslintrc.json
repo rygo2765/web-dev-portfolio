@@ -1,3 +1,12 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "react/no-unescaped-entities": "off", // Optional: Keep if you need unescaped characters in JSX
+    "@typescript-eslint/quotes": [
+      "error",
+      "single",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ], // Enforces single quotes but allows template literals and avoids unnecessary escapes
+    "no-useless-escape": "error" // Flags unnecessary escape sequences
+  }
 }
